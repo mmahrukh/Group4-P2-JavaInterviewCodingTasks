@@ -1,7 +1,5 @@
 package numbers_codingTasks;
 
-import com.sun.jdi.InvalidTypeException;
-
 import static java.lang.Integer.parseInt;
 
 public class JCIQ_12_ReverseString {

@@ -1,5 +1,7 @@
 package java_coding_interview_questions.numbers_codingTasks;
 
+import static java.lang.Integer.parseInt;
+
 public class JCIQ_12_ReverseString {
     /*
         Reverse Integer
@@ -16,4 +18,5 @@ public class JCIQ_12_ReverseString {
             input: 1234
             output: 4321
      */
+
 }

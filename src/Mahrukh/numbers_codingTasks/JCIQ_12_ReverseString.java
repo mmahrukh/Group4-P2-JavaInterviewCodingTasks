@@ -31,7 +31,7 @@ public class JCIQ_12_ReverseString {
         for(int i = n.length()-1; i >= 0; i-- ){
             reverse += n.charAt(i);
         }
-        return parseInt(reverse);
+        return parseInt(reverse);  // using parse
     }
 
 }

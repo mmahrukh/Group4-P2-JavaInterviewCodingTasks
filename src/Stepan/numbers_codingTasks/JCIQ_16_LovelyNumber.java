@@ -1,6 +1,10 @@
 package Stepan.numbers_codingTasks;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class JCIQ_16_LovelyNumber {
+
     /*
         Lovely Number
 
@@ -24,5 +28,39 @@ public class JCIQ_16_LovelyNumber {
 
             Given A = 100000, B = 100000, your function should return 0,
         because 100000 is not lovely.
-     */
+     */ // task explanation.
+
+    public static void main(String[] args) {
+
+        System.out.println(lovelyNumberCount(0, 100_000)); // output result: 92377.
+
+    }
+
+    public static int lovelyNumberCount(int startPoint, int endPoint){
+
+        int lovelyCount = 0;    // counts lovely numbers.
+
+        for (int i = startPoint; i < endPoint ; i++) {  // iterates from startPoint to endPoint.
+
+            Map<Character, Integer> numbers = new HashMap<>();  // contains digits and their counts.
+            String number = ""+i;                               // number's String representation.
+
+            for (int j = 0; j < number.length(); j++) { // iterates through number's digits.
+
+                char digit = number.charAt(j);          // assigns char as char.
+
+                numbers.put(digit, numbers.getOrDefault(digit, 0)+1);   // updates digit's count.
+
+            }
+
+            if(!numbers.containsValue(3)){
+                lovelyCount++;  // updates lovely count.
+            }
+
+        }
+
+        return lovelyCount; // return lovely count.
+
+    }
+
 }

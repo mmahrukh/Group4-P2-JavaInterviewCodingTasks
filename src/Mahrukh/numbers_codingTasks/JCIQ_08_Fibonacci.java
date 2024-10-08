@@ -44,7 +44,7 @@ public class JCIQ_08_Fibonacci {
 
         int num1 = 0;
         int num2 = 1;
-        int next = 0;
+        int next;
 
         // print until Nth fibonacci sequence
         for (int i = 2; i <= n ; i++) {

@@ -28,4 +28,30 @@ public class JCIQ_08_Fibonacci {
             6 -> 8
             8 -> 21
     */
+    public static void main(String[] args) {
+        System.out.println(fibonacci(0)); // Expected output: 0
+        System.out.println(fibonacci(1)); // Expected output: 1
+        System.out.println(fibonacci(2)); // Expected output: 1
+        System.out.println(fibonacci(3)); // Expected output: 2
+        System.out.println(fibonacci(6)); // Expected output: 8
+        System.out.println(fibonacci(8)); // Expected output: 21
+    }
+
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        }
+
+        int num1 = 0;
+        int num2 = 1;
+        int next = 0;
+
+        // print until Nth fibonacci sequence
+        for (int i = 2; i <= n ; i++) {
+            next = num1 + num2;     // Calculate the next Fibonacci number
+            num1 = num2;            // Update num1 to the previous num2
+            num2 = next;            // Update num2 to the next Fibonacci number
+        }
+        return num2;
+    }
 }

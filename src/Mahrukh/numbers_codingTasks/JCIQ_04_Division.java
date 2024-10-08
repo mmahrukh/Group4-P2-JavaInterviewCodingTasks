@@ -25,4 +25,34 @@ public class JCIQ_04_Division {
         3, 5 -> 3 / 5 is 0 with remainder 3
 
  */
+    public static void main(String[] args) {
+        divideNumbers(6, 2);
+        divideNumbers(7, 2);
+        divideNumbers(8, 3);
+        divideNumbers(7, 0);
+        divideNumbers(3, 5);
+    }
+
+    /*
+        Dividend: The number that is being divided.
+        Divisor: The number that you are dividing by.
+        Quotient: The result of the division (the answer).
+        Remainder: The leftover amount after dividing completely
+     */
+    public static void divideNumbers(int dividend, int divisor) {
+        if (divisor == 0) {
+            System.out.println("Cannot divide by 0");
+            return;
+        }
+
+        int quotient = 0;
+        int remainder = dividend;
+
+        while (remainder >= divisor) {
+            remainder -= divisor;
+            quotient++;
+        }
+
+        System.out.println(dividend + " / " + divisor + " is "  + quotient + " with remainder " + remainder );
+    }
 }

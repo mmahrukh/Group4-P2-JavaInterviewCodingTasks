@@ -24,4 +24,17 @@ public class JCIQ_07_FactorialNumber {
         6 -> 720
         8 -> 40320
  */
+    public static void main(String[] args) {
+        System.out.println(getFactorial(5)); // Expected output: 120
+        System.out.println(getFactorial(6)); // Expected output: 720
+        System.out.println(getFactorial(8)); // Expected output: 40320
+    }
+
+    public static int getFactorial(int num){
+        int factorial = 1;
+        for (int i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
 }

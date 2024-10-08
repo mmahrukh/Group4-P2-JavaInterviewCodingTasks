@@ -1,7 +1,8 @@
 package Stepan.numbers_codingTasks;
 
 public class JCIQ_01_Armstrong {
-    /*
+
+/*
         Armstrong
 
         Create a method to check if a number is an Armstrong number
@@ -34,5 +35,51 @@ public class JCIQ_01_Armstrong {
             9474 -> true
             9475 -> false
             123 -> false
-     */
+ */ // description of the task
+
+    public static void main(String[] args) {
+
+        System.out.println(isNarcissisticInteger(153));  // true
+        System.out.println(isNarcissisticInteger(371));  // true
+        System.out.println(isNarcissisticInteger(9474)); // true
+        System.out.println(isNarcissisticInteger(9475)); // false
+        System.out.println(isNarcissisticInteger(123));  // false
+
+    }
+
+/*
+Test data:
+153 -> true
+371 -> true
+9474 -> true
+9475 -> false
+123 -> false
+ */ // test data
+
+    public static boolean isNarcissisticInteger(int number){
+
+        String stringNumbers = ""+number;               // gets String number.
+        int length = stringNumbers.length();            // gets length of number.
+        int isArmstrong = 0;                            // stores future result.
+        Integer[] storeNumbers = new Integer[length];   // stores numbers raised to a power.
+
+
+        for (int i = 0; i < length; i++) { // gets each numeral from the number
+
+            int numeral = Character.getNumericValue(stringNumbers.charAt(i));   // convert a char into an integer.
+
+            storeNumbers[i] = (int) Math.pow( numeral, length );                // raises a number to the power of "length" value.
+
+        }
+
+        for (Integer each : storeNumbers) { // gets each element from the Array.
+
+            isArmstrong+=each;              // increments each element into the result "isArmstrong".
+
+        }
+
+        return number==isArmstrong;         // returns boolean result.
+
+    } // returns boolean if the numbers is narcissistic number
+
 }

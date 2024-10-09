@@ -1,6 +1,8 @@
 package Kostiantyn.numbers_codingTasks;
 
 public class JCIQ_01_Armstrong {
+
+
     /*
         Armstrong
 

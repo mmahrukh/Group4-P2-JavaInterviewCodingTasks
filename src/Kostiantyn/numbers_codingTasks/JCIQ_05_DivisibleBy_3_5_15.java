@@ -1,6 +1,31 @@
 package Kostiantyn.numbers_codingTasks;
 
 public class JCIQ_05_DivisibleBy_3_5_15 {
+
+    public static void main(String[] args) {
+        printDivisibleNumbers(100);
+    }
+
+    public static void printDivisibleNumbers(int N) {
+        StringBuilder divisibleBy15 = new StringBuilder("Divisible By 15:");
+        StringBuilder divisibleBy5 = new StringBuilder("Divisible By 5:");
+        StringBuilder divisibleBy3 = new StringBuilder("Divisible By 3:");
+
+        for (int i = 1; i <= N; i++) {
+            if (i % 15 == 0) {
+                divisibleBy15.append(" ").append(i);
+            } else if (i % 5 == 0) {
+                divisibleBy5.append(" ").append(i);
+            } else if (i % 3 == 0) {
+                divisibleBy3.append(" ").append(i);
+            }
+        }
+
+        System.out.println(divisibleBy15);
+        System.out.println(divisibleBy5);
+        System.out.println(divisibleBy3);
+    }
+}
      /*
         Divisible By 3, 5 & 15
 
@@ -15,4 +40,4 @@ public class JCIQ_05_DivisibleBy_3_5_15 {
                  Divisible By 3: 3 6 9 12 18 21 24 27 33 36 39 42 48 51 54 57 63 66 69 72 78 81 84 87 93 96 99
      */
 
-}
+

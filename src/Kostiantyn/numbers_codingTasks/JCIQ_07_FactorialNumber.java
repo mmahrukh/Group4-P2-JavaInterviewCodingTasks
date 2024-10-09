@@ -1,6 +1,22 @@
 package Kostiantyn.numbers_codingTasks;
 
 public class JCIQ_07_FactorialNumber {
+    public static void main(String[] args) {
+        System.out.println(factorial(5));  // Expected output: 120
+        System.out.println(factorial(6));  // Expected output: 720
+        System.out.println(factorial(8));  // Expected output: 40320
+    }
+
+    public static int factorial(int number) {
+        int result = 1;
+
+
+        for (int i = 1; i <= number; i++) {  // -->  Multiply all the positive integers from 1 to the given number
+            result *= i;
+        }
+
+        return result;
+    }
     /*
     Factorial Number
 

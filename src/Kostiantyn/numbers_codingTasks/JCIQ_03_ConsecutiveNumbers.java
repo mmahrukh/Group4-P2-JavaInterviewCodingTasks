@@ -1,6 +1,34 @@
 package Kostiantyn.numbers_codingTasks;
 
 public class JCIQ_03_ConsecutiveNumbers {
+    public static void main(String[] args) {
+        printConsecutiveNumbers(16);
+    }
+
+    public static void printConsecutiveNumbers(int N) {
+        for (int i = 1; i <= N; i++) {
+            String output = "";
+
+            if (i % 2 == 0) {
+                output += "Codility";
+            }
+            if (i % 3 == 0) {
+                output += "Test";
+            }
+            if (i % 5 == 0) {
+                output += "Coders";
+            }
+
+
+            if (output.equals("")) {
+                output = String.valueOf(i);
+            }
+
+
+            System.out.println(output);
+        }
+    }
+    }
      /*
         Consecutive Numbers
 
@@ -39,4 +67,4 @@ public class JCIQ_03_ConsecutiveNumbers {
                 TestCoders
                 Codility
      */
-}
+

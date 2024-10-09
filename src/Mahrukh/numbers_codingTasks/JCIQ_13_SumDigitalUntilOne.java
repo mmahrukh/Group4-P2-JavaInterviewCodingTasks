@@ -25,4 +25,23 @@ public class JCIQ_13_SumDigitalUntilOne {
             24536 -> 20 -> 2
 
      */
+
+    public static void main(String[] args) {
+        System.out.println(sumDigitUntilOne(45659)); // output: 2
+        System.out.println(sumDigitUntilOne(3244));  // output: 4
+        System.out.println(sumDigitUntilOne(24536)); // output: 2
+    }
+
+    public static int sumDigitUntilOne(int n){
+
+        while(n >= 10){
+            int sum = 0;
+            while(n > 0){
+                sum += n % 10;
+                n /= 10;
+            }
+            n = sum;
+        }
+        return n;
+    }
 }

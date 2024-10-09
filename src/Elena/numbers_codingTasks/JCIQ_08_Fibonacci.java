@@ -28,4 +28,56 @@ public class JCIQ_08_Fibonacci {
             6 -> 8
             8 -> 21
     */
+
+    public static int fibonacci(int n) {
+        // Handle the base cases
+        if (n == 0) return 0;
+        if (n == 1) return 1;
+
+        // Variables to store the two previous Fibonacci numbers
+        int a = 0; // 0th Fibonacci
+        int b = 1; // 1st Fibonacci
+        int result = 0;
+
+        // Calculate Fibonacci iteratively
+        for (int i = 2; i <= n; i++) {
+            result = a + b; // Current Fibonacci number
+            a = b; // Update the previous Fibonacci number
+            b = result; // Update the current Fibonacci number
+        }
+
+        return result; // Return the Nth Fibonacci number
+    }
+
+
+    public static void main(String[] args) {
+        // Test cases
+        System.out.println(fibonacci(0)); // Output: 0
+        System.out.println(fibonacci(1)); // Output: 1
+        System.out.println(fibonacci(2)); // Output: 1
+        System.out.println(fibonacci(3)); // Output: 2
+        System.out.println(fibonacci(6)); // Output: 8
+        System.out.println(fibonacci(8)); // Output: 21
+    }
+
+   /*
+    public static void main(String[] args) {
+        //0, 1, 1, 2, 3, 5, 8, 13.....
+        int first = 0;
+        int second = 1;
+        int next = first + second;
+        System.out.print(first + " ");
+        System.out.print(second + " ");
+        System.out.print(next + " ");
+
+        //print until 5th fibonacci sequence number
+        for (int i = 1; i <= 5; i++) {
+            first = second; //1, 1, 2
+            second = next; //1, 2, 3
+            next = first + second; //2, 3, 5
+            System.out.print(next + " ");
+        }
+    }
+    */
+
 }

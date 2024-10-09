@@ -35,4 +35,26 @@ public class JCIQ_01_Armstrong {
             9475 -> false
             123 -> false
      */
+
+    public static void main(String[] args) {
+        System.out.println(isArmstrong(153));   // true
+        System.out.println(isArmstrong(371));   // true
+        System.out.println(isArmstrong(9474));  // true
+        System.out.println(isArmstrong(9475));  // false
+        System.out.println(isArmstrong(123));  // false
+    }
+
+    public static boolean isArmstrong(int n) {
+
+        String strNum = "" + n;
+        int length = strNum.length();   // length is also the number of total digits
+        int sum = 0;
+
+        for (int i = 0; i < length; i++) {
+            int eachDigit = Integer.parseInt("" + strNum.charAt(i));
+            sum += Math.pow(eachDigit, length); // each digit ^ total digits
+        }
+
+        return sum == n;   // if sum equals to the original number then it is an Armstrong number
+    }
 }

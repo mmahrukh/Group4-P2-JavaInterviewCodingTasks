@@ -55,7 +55,7 @@ public class JCIQ_10_MaximumPossibleValue {
 
         Collections.shuffle(index); // shuffles indexes inside.
 
-        return Integer.parseInt(sb.insert(index.getFirst(), "5").toString());
+        return Integer.parseInt(sb.insert(index.get(0), "5").toString());
 
         // insert 5 into StringBuilder's object on the position which is represented as index number from the Array...
         // ... which we shuffled previously, converting it into Integer and returning eventually.

@@ -25,4 +25,30 @@ public class JCIQ_02_BinaryRepresentationOfN {
             15 -> 1111 -> 4
             16 -> 10000 -> 1
      */
+
+    public static int countOnesInBinary(int n) {
+        // Convert the number to a binary string
+        String binaryString = Integer.toBinaryString(n);
+
+        int count = 0;
+
+        // Loop through the binary string and count the '1' characters
+        for (char c : binaryString.toCharArray()) {
+            if (c == '1') {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        // Test cases
+        System.out.println(countOnesInBinary(6));  // 2
+        System.out.println(countOnesInBinary(7));  // 3
+        System.out.println(countOnesInBinary(4));  // 1
+        System.out.println(countOnesInBinary(10)); // 2
+        System.out.println(countOnesInBinary(15)); // 4
+        System.out.println(countOnesInBinary(16)); // 1
+    }
 }

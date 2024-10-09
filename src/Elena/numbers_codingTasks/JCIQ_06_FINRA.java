@@ -37,4 +37,22 @@ public class JCIQ_06_FINRA {
                 19
                 RA
         */
+
+    public static void main(String[] args) {
+        finra(1, 20);
+    }
+
+    public static void finra(int startNum, int endNum) {
+        for (int i = startNum; i <= endNum; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FINRA");
+            } else if (i % 3 == 0) {
+                System.out.println("FIN");
+            } else if (i % 5 == 0) {
+                System.out.println("RA");
+            } else {
+                System.out.println(i);
+            }
+        }
+    }
 }

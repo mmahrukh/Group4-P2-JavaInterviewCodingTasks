@@ -25,4 +25,49 @@ public class JCIQ_16_LovelyNumber {
             Given A = 100000, B = 100000, your function should return 0,
         because 100000 is not lovely.
      */
+
+    public static void main(String[] args) {
+        System.out.println("lovelyNumbers(0, 0) = " + lovelyNumbers(0, 0));
+        System.out.println("lovelyNumbers(1, 111) = " + lovelyNumbers(1, 111));
+        System.out.println("lovelyNumbers(100000, 100000) = " + lovelyNumbers(100000, 100000));
+    }
+
+    public static int lovelyNumbers(int a, int b){
+        int count = 0;
+
+        // Iterate through each number in the range [a..b] and check if it is lovely
+        for(int i = a; i <= b; i++){
+            int num = i;                    // number
+            int digitCount[] = new int[10]; // number of digits
+
+            // Special case for number 0
+            if (num == 0){
+                digitCount[0] = 1;  // 0 have one '0'
+            }
+
+            // Count the occurrence of each digit in the number
+            while(num!= 0){
+                digitCount[num % 10]++;
+                num /= 10;
+            }
+
+            boolean isLovely = true;
+
+            // Check if any digit appears 3 or more times
+            for(int j = 0; j < 10; j++){
+                if(digitCount[j] >= 3){
+                    isLovely = false;
+                    break;
+                }
+            }
+
+            // If the number is lovely, increment the count
+            if(isLovely){
+                count++;
+            }
+        }
+
+        return count;
+    }
+
 }

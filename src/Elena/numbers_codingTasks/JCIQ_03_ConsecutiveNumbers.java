@@ -39,4 +39,34 @@ public class JCIQ_03_ConsecutiveNumbers {
                 TestCoders
                 Codility
      */
+
+    public static void printConsecutiveNumbers(int N) {
+        for (int i = 1; i <= N; i++) {
+            String result = "";
+
+            //Check divisibility and concatenate the respective words
+            if (i % 2 == 0) {
+                result = "Codility";
+            }
+            if (i % 3 == 0) {
+                result += "Test";
+            }
+            if (i % 5 == 0) {
+                result += "Coders";
+            }
+
+            //If none of the conditions were met, just print the number
+            if (result.isEmpty()) {
+                System.out.println(i);
+            } else {
+                System.out.println(result); //Print the concatenated words
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+        //Test case: Print numbers from 1 to 16
+        printConsecutiveNumbers(16);
+    }
 }

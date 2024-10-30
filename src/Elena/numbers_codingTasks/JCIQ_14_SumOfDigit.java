@@ -18,4 +18,24 @@ public class JCIQ_14_SumOfDigit {
             54321 -> 5 + 4 + 3 + 2 + 1 = 15
             214 -> 2 + 1 + 4 = 7
      */
+
+    public static int sumDigits(int n) {
+        int sum = 0;
+
+        // Loop to extract digits and add them to sum
+        while (n > 0) {
+            sum += n % 10; // Add the last digit to the sum
+            n /= 10;       // Remove the last digit
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        // Test cases
+        System.out.println(sumDigits(123));   // 6
+        System.out.println(sumDigits(11111)); // 5
+        System.out.println(sumDigits(54321)); // 15
+        System.out.println(sumDigits(214));   // 7
+    }
 }

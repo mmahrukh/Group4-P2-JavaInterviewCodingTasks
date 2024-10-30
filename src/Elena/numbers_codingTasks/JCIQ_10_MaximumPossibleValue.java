@@ -15,4 +15,33 @@ public class JCIQ_10_MaximumPossibleValue {
             Given N = 0, the function should return 50
             Given N = -999, the function should return -5999
      */
+
+    public static int insertFive(int n) {
+        int maxValue = n;  // Initially set the maximum value to the original number
+        int currentPosition = 1;
+
+        // Loop through all positions to try inserting '5'
+        while (n / currentPosition != 0 || currentPosition == 1) {
+            // Split the number and insert '5' at the current position
+            int newNumber = (n / currentPosition) * (currentPosition * 10) + 5 * currentPosition + (n % currentPosition);
+
+            // Update the maximum value if the new number is larger
+            if (newNumber > maxValue) {
+                maxValue = newNumber;
+            }
+
+            // Move to the next position
+            currentPosition *= 10;
+        }
+
+        return maxValue;
+    }
+
+    public static void main(String[] args) {
+        // Test cases
+        System.out.println(insertFive(268));  // 5268
+        System.out.println(insertFive(670));  // 6750
+        System.out.println(insertFive(0));    // 50
+        System.out.println(insertFive(-999)); // -5999
+    }
 }

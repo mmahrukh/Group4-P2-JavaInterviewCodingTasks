@@ -15,4 +15,36 @@ public class JCIQ_05_DivisibleBy_3_5_15 {
                  Divisible By 3: 3 6 9 12 18 21 24 27 33 36 39 42 48 51 54 57 63 66 69 72 78 81 84 87 93 96 99
      */
 
+    public static void main(String[] args) {
+        int N = 100;
+
+        //Print numbers divisible by 15
+        System.out.print("Divisible By 15: ");
+        for (int i = 1; i <= N; i++) {
+            if (i % 15 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println(); //Move to the next line
+
+        //Print numbers divisible by 5
+        System.out.print("Divisible By 5: ");
+        for (int i = 1; i <= N; i++) {
+            if (i % 5 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println(); //Move to the next line
+
+        //Print numbers divisible by 3
+        System.out.print("Divisible By 3: ");
+        for (int i = 1; i <= N; i++) {
+            if (i % 3 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println(); //Move to the next line
+
+    }
+
 }

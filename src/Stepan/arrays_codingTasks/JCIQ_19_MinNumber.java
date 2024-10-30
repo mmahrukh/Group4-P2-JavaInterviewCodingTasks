@@ -16,4 +16,31 @@ public class JCIQ_19_MinNumber {
             output:
                 -1
      */
+
+    public static void main(String[] args) {
+
+        int[] array = {3, 5, 1, 5, -1, 5};
+
+        System.out.println(arrayMin(array));    // output: -1
+
+    }
+
+    public static int arrayMin(int[] array){
+
+        int minValue = Integer.MAX_VALUE;   // the most max integer value.
+
+        for (int each : array) {    // iterates through the array.
+
+            if(each < minValue){      // compares current element with the int minValue.
+
+                minValue = each;      // if true, updates it.
+
+            }
+
+        }
+
+        return minValue;    // returns.
+
+    }
+
 }

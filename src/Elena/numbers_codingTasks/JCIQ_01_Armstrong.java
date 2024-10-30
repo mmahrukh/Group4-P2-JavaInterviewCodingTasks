@@ -1,7 +1,43 @@
 package Elena.numbers_codingTasks;
 
 public class JCIQ_01_Armstrong {
-    /*
+    public static boolean isArmstrong(int number) {
+        int originalNumber = number; // Save the original number
+        int numDigits = 0;
+        int sum = 0;
+
+        //Calculate the number of digits
+        int temp = number;
+        while (temp > 0) {
+            numDigits++;
+            temp /= 10;
+        }
+
+        temp = number; //Reset temp to the original number
+
+        // Calculate the sum of each digit raised to the power of numDigits
+        while (temp > 0) {
+            int digit = temp % 10; // Get the last digit
+            sum += (int) Math.pow(digit, numDigits); // Raise the digit to the power of numDigits and add it to the sum
+            temp /= 10; // Remove the last digit from temp
+        }
+
+        // Check if the sum is equal to the original number
+        return sum == originalNumber;
+    }
+
+    public static void main(String[] args) {
+        //Test cases
+        System.out.println(isArmstrong(153)); //true
+        System.out.println(isArmstrong(371)); //true
+        System.out.println(isArmstrong(9474)); //true
+        System.out.println(isArmstrong(9475)); //false
+        System.out.println(isArmstrong(123)); //false
+    }
+
+}
+
+/*
         Armstrong
 
         Create a method to check if a number is an Armstrong number
@@ -35,4 +71,3 @@ public class JCIQ_01_Armstrong {
             9475 -> false
             123 -> false
      */
-}

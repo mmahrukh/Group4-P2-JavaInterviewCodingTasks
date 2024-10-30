@@ -44,7 +44,11 @@ public class JCIQ_01_Armstrong {
         System.out.println(isNarcissisticInteger(9474)); // true
         System.out.println(isNarcissisticInteger(9475)); // false
         System.out.println(isNarcissisticInteger(123));  // false
-
+        System.out.println(isNarcissisticInteger(153));  // true
+        System.out.println(isNarcissisticInteger(371));  // true
+        System.out.println(isNarcissisticInteger(9474)); // true
+        System.out.println(isNarcissisticInteger(9475)); // false
+        System.out.println(isNarcissisticInteger(123));  // false
     }
 
 /*
